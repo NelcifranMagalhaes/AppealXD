@@ -1,0 +1,22 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+  username: postgres
+  password: root
+
+development:
+  <<: *default
+  database: Appeal_development
+
+test:
+  <<: *default
+  database: Appeal_test
+
+production:
+  <<: *default
+  database: Appeal_production
+  username: Appeal
+  password: <%= ENV['APPEAL_DATABASE_PASSWORD'] %>
