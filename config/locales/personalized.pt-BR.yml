@@ -3,8 +3,8 @@ pt-BR:
   activerecord:
     models:
       user: Proprietário
-      event: Loja
-      persona: Vendedor
+      event: Evento
+      persona: Dados Pessoais
     attributes:  
       user:
         password: Senha

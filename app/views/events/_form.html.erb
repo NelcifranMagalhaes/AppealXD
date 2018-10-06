@@ -3,15 +3,46 @@
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :address %>
-    <%= f.input :duration_time %>
-    <%= f.input :max_people %>
-    <%= f.input :ticket_value %>
+  <div class="box">
+    <div class="field">
+      <label class="label">Nome</label>
+      <div class="control">
+        <%= f.input :name,label: false ,input_html: {class: 'input'}%>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Endereço</label>
+      <div class="control">
+        <%= f.input :address,label: false ,input_html: {class: 'input'}%>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Tempo de duração</label>
+      <div class="control">
+        <%= f.input :duration_time,label: false ,html5: true,input_html: {class: 'input'}%>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Número Máximo de Pessoas</label>
+      <div class="control">
+        <%= f.input :max_people,label: false ,input_html: {class: 'input'}%>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Valor do Ingresso</label>
+      <div class="control">
+        <%= f.input :ticket_value,label: false ,input_html: {class: 'input'}%>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Foto do Ingresso</label>
+      <div class="control">
+        <%= f.input :file_appeal,label: false ,input_html: {class: 'input'}%>
+      </div>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="control">
+    <%= f.button :submit,class: "button is-primary" %>
   </div>
 <% end %>

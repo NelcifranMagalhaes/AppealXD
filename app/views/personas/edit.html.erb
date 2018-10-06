@@ -1,6 +1,10 @@
-<h1>Editing Persona</h1>
 
-<%= render 'form', persona: @persona %>
-
-<%= link_to 'Show', @persona %> |
-<%= link_to 'Back', personas_path %>
+<article class="message is-dark">
+	<div class="message-header">
+		<p>Editar o Cadastro</p>
+	</div>
+ </article>
+ <%= render 'form', persona: @persona %>
+<br>
+<%= link_to 'Mostrar', @persona ,class: "button is-info"%> 
+<%= link_to 'Voltar', personas_path ,class: "button is-link"%>

@@ -1,31 +1,20 @@
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @event.address %>
-</p>
-
-<p>
-  <strong>Duration time:</strong>
-  <%= @event.duration_time %>
-</p>
-
-<p>
-  <strong>Max people:</strong>
-  <%= @event.max_people %>
-</p>
-
-<p>
-  <strong>Ticket value:</strong>
-  <%= @event.ticket_value %>
-</p>
-
-
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+    <%= @event.name %>
+    </p>
+  </header>
+  <div class="card-content">
+    <p class="card-header-title">
+  Endereço: </p><%= @event.address %>
+    <p class="card-header-title">: Duração</p><%= l @event.duration_time %>
+  </div>
+    <%= image_tag(@event.file_appeal.url) %>
+  <footer class="card-footer">
+    <%= link_to 'Editar', edit_event_path(@event),class: "card-footer-item" %>
+    <%= link_to 'Voltar', events_path,class: "card-footer-item"%>
+  </footer>
+</div>

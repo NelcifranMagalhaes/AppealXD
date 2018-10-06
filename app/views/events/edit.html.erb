@@ -1,6 +1,11 @@
-<h1>Editing Event</h1>
 
+<article class="message is-dark">
+	<div class="message-header">
+		<p>Editar o Evento</p>
+	</div>
+ </article>
 <%= render 'form', event: @event %>
 
-<%= link_to 'Show', @event %> |
-<%= link_to 'Back', events_path %>
+<br>
+<%= link_to 'Mostrar', @event ,class: "button is-info"%> 
+<%= link_to 'Voltar', events_path ,class: "button is-link"%>

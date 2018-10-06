@@ -1,15 +1,21 @@
+
 <p id="notice"><%= notice %></p>
 
-<h1>Personas</h1>
+<article class="message is-dark">
+  <div class="message-header">
+    <p>Dados Pessoais</p>
+  </div>
+ </article> 
 
-<table>
+ <br>
+
+<table class="table is-narrow">
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Nome</th>
       <th>Cnpj</th>
-      <th>Social reason</th>
-      <th>Fantasy name</th>
-      <th>User</th>
+      <th>Razão Social</th>
+      <th>Nick</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,10 +27,9 @@
         <td><%= persona.cnpj %></td>
         <td><%= persona.social_reason %></td>
         <td><%= persona.fantasy_name %></td>
-        <td><%= persona.user %></td>
-        <td><%= link_to 'Show', persona %></td>
-        <td><%= link_to 'Edit', edit_persona_path(persona) %></td>
-        <td><%= link_to 'Destroy', persona, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= render 'shared/action_links', object: persona %>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +37,5 @@
 
 <br>
 
-<%= link_to 'New Persona', new_persona_path %>
+<%= link_to 'Novo Cadastro', new_persona_path ,class: "button is-info"%>
+

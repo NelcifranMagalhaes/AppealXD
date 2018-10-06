@@ -25,7 +25,7 @@ class PersonasController < ApplicationController
   # POST /personas.json
   def create
     @persona = Persona.new(persona_params)
-
+    @persona.user_id = current_user.id
     respond_to do |format|
       if @persona.save
         format.html { redirect_to @persona, notice: 'Persona was successfully created.' }
