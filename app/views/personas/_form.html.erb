@@ -1,0 +1,39 @@
+
+<%= simple_form_for(@persona) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="box">
+    <div class="field">
+      <label class="label">Nome</label>
+      <div class="control">
+        <%= f.input :name,label: false ,input_html: {class: 'input'}%>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">CNPJ</label>
+      <div class="control">
+        <%= f.input :cnpj,label: false ,input_html: {class: 'input'}%>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Razão Social</label>
+      <div class="control">
+        <%= f.input :social_reason,label: false ,input_html: {class: 'input'}%>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Razão Social</label>
+      <div class="control">
+        <%= f.input :fantasy_name,label: false ,input_html: {class: 'input'}%>
+      </div>
+    </div>
+  </div>
+
+  <div class="control">
+    <%= f.button :submit,class: "button is-primary" %>
+  </div>
+<% end %>
