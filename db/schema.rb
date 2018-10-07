@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2018_10_06_200605) do
   create_table "events", force: :cascade do |t|
     t.string "name"
     t.string "address"
-    t.date "duration_time"
+    t.time "duration_time"
     t.integer "max_people"
     t.float "ticket_value"
     t.bigint "user_id"

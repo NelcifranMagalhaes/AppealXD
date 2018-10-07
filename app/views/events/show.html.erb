@@ -10,9 +10,11 @@
   <div class="card-content">
     <p class="card-header-title">
   Endereço: </p><%= @event.address %>
-    <p class="card-header-title">: Duração</p><%= l @event.duration_time %>
+    <p class="card-header-title">: Duração</p><%= @event.duration_time.to_s(:time) %>
   </div>
-    <%= image_tag(@event.file_appeal.url) %>
+    <% if @event.file_appeal.present?%>
+      <%= image_tag(@event.file_appeal.url) %>
+    <% end %>
   <footer class="card-footer">
     <%= link_to 'Editar', edit_event_path(@event),class: "card-footer-item" %>
     <%= link_to 'Voltar', events_path,class: "card-footer-item"%>

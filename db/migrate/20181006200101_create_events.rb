@@ -3,7 +3,7 @@ class CreateEvents < ActiveRecord::Migration[5.2]
     create_table :events do |t|
       t.string :name
       t.string :address
-      t.date :duration_time
+      t.time :duration_time
       t.integer :max_people
       t.float :ticket_value
       t.references :user, foreign_key: true
