@@ -2,7 +2,7 @@
 > Adicione Eventos.
 
 
-Uma aplicação web para gerenciamento de metas de lojas.
+Uma aplicação web para Cadastro de Eventos.
 
 
 ## Installation
@@ -33,6 +33,13 @@ rails db:migrate
 rails db:seed #optional
 rails s
 ```
+##Funcionalidades
+* Cadastro de Usuários
+* Cadastro de Dados Pessoais do Usuário, cada usuário pode ter apenas um.
+* Cadastro de eventos
+* Cada usuário pode ter um ou mais eventos
+* Validação de Usuários, Dados pessoais e eventos
+* Teste de Models com Rspec
 
 Lembre-se de deletar o banco , antes de rodar o seed .
 
@@ -42,6 +49,7 @@ Lembre-se de deletar o banco , antes de rodar o seed .
 * No front end, usei [BulmaCss](https://bulma.io/)
 * No back end Ruby
 * Usei algumas gems, todos elas tem link no gem file, entre elas, devise para autenticação e kaminari * para paginação
+* PostgreSQL
 
 ## Meta
 Nelcifran Magalhaes – [Linkedin](https://www.linkedin.com/in/nelcifranpires/
