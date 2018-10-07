@@ -33,7 +33,7 @@ rails db:migrate
 rails db:seed #optional
 rails s
 ```
-##Funcionalidades
+## Funcionalidades
 * Cadastro de Usuários
 * Cadastro de Dados Pessoais do Usuário, cada usuário pode ter apenas um.
 * Cadastro de eventos
