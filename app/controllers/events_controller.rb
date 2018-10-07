@@ -4,7 +4,8 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.where(user: current_user)
+    @q = Event.ransack(params[:q])
+    @events = @q.result.where(user: current_user).order(name: :desc).page(params[:page]).per(8)
   end
 
   # GET /events/1
