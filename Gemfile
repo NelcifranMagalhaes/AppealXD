@@ -83,4 +83,4 @@ gem 'jquery-ui-rails'
 #https://github.com/nathanvda/cocoon
 gem "cocoon"
 #https://github.com/carrierwaveuploader/carrierwave
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
